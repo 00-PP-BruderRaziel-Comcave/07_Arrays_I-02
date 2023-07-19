@@ -140,11 +140,13 @@ function getSentenceArr2(arr) {
     let str = ""; // Anfangswert
 
     for (let i = 0; i < arr.length; i++) {
-       str += arr[i] + GAP;
+        // 2. Variante if-else
+        if (i < arr.length-1) {  
+            str += arr[i] + GAP;
+        } else{
+            str += arr[i] + PUNCT;
+        }
     }
-    // 1. Variante trim()
-    str = str.trim()  + PUNCT;
-
 
     return str;
 }
