@@ -133,28 +133,14 @@ function getSentence(word1,word2,word3,word4,word5,word6) {
 // Transponierung: untereinander -----> nebeneinander
 // Helge Schneider: Ananananderreihung ....
 
-output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich"]));
+output(getSentenceArr2(["Ich","bin","die","coole","Maxine","Mützerich",]));
 function getSentenceArr2(arr) {
     const GAP = " ";
     const PUNCT = ".";
-    let str = ""; // Anfangswert
 
-    for (let i = 0; i < arr.length; i++) {
-        // 2. Variante if-else
-        if (i < arr.length-1) {  
-            str += arr[i] + GAP;
-        } else{
-            str += arr[i] + PUNCT;
-        }
-    }
-
-    return str;
+    // 3. Variante mit Join()-Funktion auf das array angewendet
+    return arr.join(GAP) + PUNCT;
 }
-
-
-
-
-
 
 
 
